@@ -1,0 +1,71 @@
+
+.formclass p {
+  color: red;
+  font-weight: bold;
+}
+.formclass span {
+  color: red;
+}
+
+  tr:nth-child(even) {
+  background-color:lightgreen;
+}
+  table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 10px 30px;
+}
+  th
+ {
+  padding: 10px 35px;
+  text-align: center;
+  background-color: #007bff;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+ } 
+ tr{
+  text-align: center;
+  padding: 14px 29px;
+  font-weight: bold;
+ }   
+ input
+ {
+ font-weight: bold;                            
+ }  
+ .tableclass
+ {
+  margin-left: 200px;                            
+ } 
+.mainclass
+{
+  background-color: #007bff;
+  padding: 20px 10px;
+
+}
+.subclass
+{
+margin-bottom: 20px;
+}
+.firstinput
+{
+  margin-top: 20px;
+}
+.subpart
+{
+  margin: auto;
+ text-align: center;
+ justify-content: center; 
+ display: flex;                        
+}  
+.subpart th{
+font-size: 20px;                             
+}      
+input[type=button]
+{
+ justify-content: center;
+ display: flex;   
+ margin: auto;  
+ margin-top: 30px; 
+                        
+}

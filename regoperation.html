@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Registration crud operation</title>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="css/all.min.css">
+  <!-- icheck bootstrap -->
+  <link rel="stylesheet" href="css/icheck-bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+<body onload="regopeartion()">
+
+  <div class="container formclass subclass">
+    <form class="form-horizontal" id="formregisterdata" style="display:none" onsubmit="formsubmit(event)">
+      <!-- -------------input -->
+      <input type="hidden" name="index">
+      <div class="form-group firstinput">
+        <label class="control-label col-sm-2">Username</label>
+        <div class="col-sm-10">
+          <!-- ------------------------name--------------------------------- -->
+          <input type="text" class="form-control" placeholder="Full name" id="firstinput" name="username"
+          onblur="return firstnamevalidation()">
+        </div>
+        <p id="fullnamemsg" class="text-center text-danger"></p>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2">Email</label>
+        <div class="col-sm-10">   
+              <!-------------------------email-----------------------------  -->
+          <input type="email" class="form-control" placeholder="Email" id="secondinput"name="email"
+              onblur="return emailvalidation()">
+        </div>
+        <p id="emailerror" class="text-center text-danger"></p>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2">Password</label>
+        <div class="col-sm-10"> 
+                   <!--------------------password---------------------------  -->
+          <input type="password" class="form-control" placeholder="Password" id="thirdinput" name="pwd"
+          onblur="return passwordvalidation()">
+        </div>
+        <p id="passworderror" class="text-center text-danger"></p>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="pwd">Password</label>
+        <div class="col-sm-10">          
+          <input type="password" class="form-control" placeholder="Retype password"
+              onblur="return retypepasswordvalidation()" id="fourinput" >
+        </div>
+        <p id="passworderror" class="text-center text-danger"></p>
+      </div>
+      <div class="form-group">        
+        <div class="col-sm-offset-2 col-sm-10"> 
+          <button type="submit" class="btn btn-default btn-primary" onclick="updatedata()" value="update">Update</button>
+        </div>       
+        </div>
+       </form> 
+</div>
+<div class="tableclass">
+
+  <table id="table">
+      <thead>
+       <th>Name</th>
+       <th>Email</th>
+       <th>Password</th> 
+       <th>operation</th>                        
+      </thead>    
+      <tbody id="userdata">
+     </tbody>                      
+   </table>
+  
+   <div id="displaydata"></div>
+  </div>
+<!-- jQuery -->
+<script src="js/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/commonvalidatefile.js"></script>
+<script src="js/regoperation.js"></script>                          
+</body>
+</html>
